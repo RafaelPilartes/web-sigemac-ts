@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.customBasePadding {
+  @apply py-4 px-4 flex justify-center items-center;
+}
+.customBaseMargin {
+  @apply my-4 mx-6 justify-center items-center;
+}
+.translate-z-0 {
+  transform: translateZ(0px);
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #003b93;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #003b93;
+}
+
+@layer base {
+  body {
+    @apply leading-relaxed font-poppins bg-white text-baseText text-sm;
+  }
+
+  .container {
+    @apply mx-auto w-full max-w-[1200px] px-6;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 5px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #003b93;
+    border-radius: 14px;
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease; /* Tempo e função de animação personalizados */
+}
+
+.zoom-out {
+  animation: zoomOut 1s ease; /* Tempo e função de animação personalizados */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1); /* Sem zoom no início */
+  }
+  100% {
+    transform: scale(1.1); /* Zoom de 20% no final */
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1); /* Zoom de 20% no início */
+  }
+  100% {
+    transform: scale(1); /* Sem zoom no final */
+  }
+}
+
+.zoom {
+  animation: zoomInOut 4s ease infinite;
+  transform-origin: center;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Sem zoom no início */
+  }
+  50% {
+    transform: scale(1.1); /* Zoom de 20% no final */
+  }
+  100% {
+    transform: scale(1); /* Zoom de 20% no final */
+  }
+}
