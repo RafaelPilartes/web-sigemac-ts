@@ -90,13 +90,13 @@ export const Header = () => {
             {/* Bottom */}
             <div className="w-full max-w-7xl flex items-center justify-between flex-row max-w-s-1030:border-r border-gray-300 max-w-s-1030:hidden ">
               {/* Logo */}
-              <div className="px-4 py-2  ">
+              <a href={routsNameMain.home} className="px-4 py-2  ">
                 <img
                   src="/logo/logo.png"
                   alt="Logo sigemac"
                   className="w-full max-w-[14rem] min-w-[8rem] "
                 />
-              </div>
+              </a>
 
               {/* Links Nav */}
               <nav>

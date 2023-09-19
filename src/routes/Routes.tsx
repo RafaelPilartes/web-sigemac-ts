@@ -12,6 +12,7 @@ import Services from '../pages/main/services'
 import Specialties from '../pages/main/specialties'
 import Blog from '../pages/main/blog'
 import Contacts from '../pages/main/contacts'
+import Marking from '../pages/main/marking'
 
 // const Home = React.lazy(() => import('../pages/main/home'))
 
@@ -76,6 +77,15 @@ export function Router() {
             element={
               <React.Suspense fallback={<Loading />}>
                 <Blog />
+              </React.Suspense>
+            }
+          />
+          {/* Marking */}
+          <Route
+            path={routsNameMain.marking}
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <Marking />
               </React.Suspense>
             }
           />

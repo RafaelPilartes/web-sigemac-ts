@@ -4,6 +4,7 @@ import { Footer } from '../components/main/Footer'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { ImCalendar } from 'react-icons/im'
 import { TbSos } from 'react-icons/tb'
+import { routsNameMain } from '../data/routsName'
 
 function RootLayout() {
   return (
@@ -29,7 +30,12 @@ function RootLayout() {
             </div>
           </div>
         </button>
-        <button className="relative w-14 h-14 group bg-primary-200 text-white text-2xl flex flex-col items-center justify-center rounded-full p-3 hover:scale-110 transition-all duration-200 active:scale-100">
+
+        {/* Marking */}
+        <a
+          href={routsNameMain.marking}
+          className="relative w-14 h-14 group bg-primary-200 text-white text-2xl flex flex-col items-center justify-center rounded-full p-3 hover:scale-110 transition-all duration-200 active:scale-100"
+        >
           <ImCalendar />
           {/* tooltip */}
           <div
@@ -45,8 +51,10 @@ function RootLayout() {
               <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
             </div>
           </div>
-        </button>
-        <button className="relative w-14 h-14 group bg-[#25D366] text-white text-4xl flex items-center justify-center rounded-full p-3 hover:scale-110 transition-all duration-200 active:scale-100">
+        </a>
+
+        {/* WhatsApp */}
+        <a className="relative w-14 h-14 group bg-[#25D366] text-white text-4xl flex items-center justify-center rounded-full p-3 hover:scale-110 transition-all duration-200 active:scale-100">
           <AiOutlineWhatsApp />
           {/* tooltip */}
           <div
@@ -62,7 +70,7 @@ function RootLayout() {
               <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
             </div>
           </div>
-        </button>
+        </a>
       </div>
       <Footer />
     </>
